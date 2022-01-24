@@ -1,0 +1,10 @@
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  width: 100%;
+
+}
+ ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: blue !important;
+}
