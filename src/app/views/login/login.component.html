@@ -16,21 +16,19 @@
             <form class="login-form" id="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
               <mat-form-field class="mat-headline">
                 <mat-icon matPrefix svgIcon="user"></mat-icon>
-                <!-- <mat-icon svgIcon="user" aria-hidden="false" aria-label="user"></mat-icon> -->
                 <input class="input" type="email" matInput placeholder="email" formControlName="email">
-                <mat-hint *ngIf="validEmail()">El campo email es obligatorio.</mat-hint>
+                <mat-hint *ngIf="validEmail()">El email es obligatorio.</mat-hint>
               </mat-form-field>
               <mat-form-field class="mat-headline">
                 <mat-icon matPrefix svgIcon="lock"></mat-icon>
                 <input matInput placeholder="contraseña" [type]="hide ? 'password' : 'text'" formControlName="password">
-                <mat-hint *ngIf="validPass()">El campo contraseña es obligatorio.</mat-hint>
+                <mat-hint *ngIf="validPass()">La contraseña es obligatoria (min 5 caracteres).</mat-hint>
               </mat-form-field>
               <div class="wrapper-toggle">
                 <p>Recordar</p>
                 <mat-slide-toggle type="checkbox" formControlName="reminder"></mat-slide-toggle>
               </div>
               <button class="next-button" type="submit" mat-raised-button color='primary'> Acceder
-                <mat-spinner *ngIf="loading" id="login-spinner"></mat-spinner>
               </button>
             </form>
           </mat-card-content>

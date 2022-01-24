@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InsideComponent } from './inside.component';
+import { MyMaterialModule } from 'src/app/material.module';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -9,7 +11,8 @@ import { InsideComponent } from './inside.component';
     InsideComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MyMaterialModule,
   ]
 })
 export class InsideModule { }
